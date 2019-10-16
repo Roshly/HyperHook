@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Loader {
     internal class Jnk1 {
@@ -41,53 +36,53 @@ namespace Loader {
         }
 
         static dynamic RandProfiler_1() {
-            dynamic str1 = Extensions.Other.RandomString(15);
-            dynamic str2 = str1 + Extensions.Other.RandomString(15);
-            dynamic str3 = str2 + Extensions.Other.RandomString(15);
-            dynamic str4 = str3 + Extensions.Other.RandomString(15);
-            dynamic str5 = str4 + Extensions.Other.RandomString(15);
+            dynamic str1 = Extensions.RandomString(15);
+            dynamic str2 = str1 + Extensions.RandomString(15);
+            dynamic str3 = str2 + Extensions.RandomString(15);
+            dynamic str4 = str3 + Extensions.RandomString(15);
+            dynamic str5 = str4 + Extensions.RandomString(15);
 
-            return Extensions.Other.RandomString(15);
+            return Extensions.RandomString(15);
         }
 
         static dynamic RandProfiler_2() {
-            dynamic str1 = Extensions.Other.RandomString(15);
-            dynamic str2 = str1 + Extensions.Other.RandomString(15);
-            dynamic str3 = str2 + Extensions.Other.RandomString(15);
-            dynamic str4 = str3 + Extensions.Other.RandomString(15);
-            dynamic str5 = str4 + Extensions.Other.RandomString(15);
+            dynamic str1 = Extensions.RandomString(15);
+            dynamic str2 = str1 + Extensions.RandomString(15);
+            dynamic str3 = str2 + Extensions.RandomString(15);
+            dynamic str4 = str3 + Extensions.RandomString(15);
+            dynamic str5 = str4 + Extensions.RandomString(15);
 
-            return Extensions.Other.RandomString(15);
+            return Extensions.RandomString(15);
         }
 
         static dynamic RandProfiler_3() {
-            dynamic str1 = Extensions.Other.RandomString(15);
-            dynamic str2 = str1 + Extensions.Other.RandomString(15);
-            dynamic str3 = str2 + Extensions.Other.RandomString(15);
-            dynamic str4 = str3 + Extensions.Other.RandomString(15);
-            dynamic str5 = str4 + Extensions.Other.RandomString(15);
+            dynamic str1 = Extensions.RandomString(15);
+            dynamic str2 = str1 + Extensions.RandomString(15);
+            dynamic str3 = str2 + Extensions.RandomString(15);
+            dynamic str4 = str3 + Extensions.RandomString(15);
+            dynamic str5 = str4 + Extensions.RandomString(15);
 
-            return Extensions.Other.RandomString(15);
+            return Extensions.RandomString(15);
         }
 
         static dynamic RandProfiler_4() {
-            dynamic str1 = Extensions.Other.RandomString(15);
-            dynamic str2 = str1 + Extensions.Other.RandomString(15);
-            dynamic str3 = str2 + Extensions.Other.RandomString(15);
-            dynamic str4 = str3 + Extensions.Other.RandomString(15);
-            dynamic str5 = str4 + Extensions.Other.RandomString(15);
+            dynamic str1 = Extensions.RandomString(15);
+            dynamic str2 = str1 + Extensions.RandomString(15);
+            dynamic str3 = str2 + Extensions.RandomString(15);
+            dynamic str4 = str3 + Extensions.RandomString(15);
+            dynamic str5 = str4 + Extensions.RandomString(15);
 
-            return Extensions.Other.RandomString(15);
+            return Extensions.RandomString(15);
         }
 
         static dynamic RandProfiler_5() {
-            dynamic str1 = Extensions.Other.RandomString(15);
-            dynamic str2 = str1 + Extensions.Other.RandomString(15);
-            dynamic str3 = str2 + Extensions.Other.RandomString(15);
-            dynamic str4 = str3 + Extensions.Other.RandomString(15);
-            dynamic str5 = str4 + Extensions.Other.RandomString(15);
+            dynamic str1 = Extensions.RandomString(15);
+            dynamic str2 = str1 + Extensions.RandomString(15);
+            dynamic str3 = str2 + Extensions.RandomString(15);
+            dynamic str4 = str3 + Extensions.RandomString(15);
+            dynamic str5 = str4 + Extensions.RandomString(15);
 
-            return Extensions.Other.RandomString(15);
+            return Extensions.RandomString(15);
         }
     }
 }

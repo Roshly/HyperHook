@@ -9,15 +9,15 @@ using System.Threading.Tasks;
 using Newtonsoft.Json;
 
 namespace Encryptor {
-    class Settings {
-        public string OutputFolder = "_Encrypted";
-        public string EncryptionKey = "Password";
-        public string StableUrl = "http://localhost/Files/inj/Stable.dll";
-        public string BetaUrl = "http://localhost/Files/inj/Beta.dll";
-        public bool NoFilesWarning = true;
+    internal class Settings {
+        internal static string OutputFolder = "_Encrypted";
+        internal static string EncryptionKey = "Password";
+        internal static string StableUrl = "http://localhost/Files/inj/Stable.dll";
+        internal static string BetaUrl = "http://localhost/Files/inj/Beta.dll";
+        internal static bool NoFilesWarning = true;
     }
 
-    class JsonConfig {
+    internal class JsonConfig {
         public string OutputFolder { get; set; }
         public string EncryptionKey { get; set; }
         public string StableUrl { get; set; }
@@ -26,8 +26,6 @@ namespace Encryptor {
     }
 
     class Program {
-        private static string Password = "Password";
-
         private static List<string> FileList = new List<string>();
 
         static void Main(string[] args) {
@@ -46,8 +44,8 @@ namespace Encryptor {
                 JsonConfig JsonConfig = new JsonConfig {
                     OutputFolder = "_Encrypted",
                     EncryptionKey = "Password",
-                    StableUrl = "http://localhost/Files/inj/Stable.dll",
-                    BetaUrl = "http://localhost/Files/inj/Beta.dll",
+                    StableUrl = Settings.StableUrl,
+                    BetaUrl = Settings.BetaUrl,
                     NoFilesWarning = true
                 };
 

@@ -1,9 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System;
-using System.ComponentModel;
 using System.Net;
 using System.Threading;
-using System.Windows.Forms;
 
 namespace Loader {
     public partial class Form2 : MetroFramework.Forms.MetroForm {
@@ -29,14 +27,14 @@ namespace Loader {
         void metroButton1_Click(object sender, EventArgs e) {
             this.metroButton1.Enabled = false;
 
-            using (System.Net.WebClient WebClient = new System.Net.WebClient()) {
+            using (var WebClient = new WebClient()) {
                 WebClient.Proxy = null;
 
-                WebClient.Headers.Add("user-agent", Settings.Useragent_string);
+                WebClient.Headers.Add("user-agent", Settings.User_Agent);
 
-                Settings.HWID = Extensions.HWID.UserID();
+                Settings.HWID = Hwid.UserID();
 
-                var temp = Extensions.Authentication.Login(
+                var temp = Authentication.Login(
                     Settings.Username,
                     Settings.Password,
                     Settings.HWID);
@@ -46,8 +44,11 @@ namespace Loader {
                 WebClient.DownloadProgressChanged += DownloadChanged;
                 WebClient.DownloadDataCompleted += DownloadCompleted;
 
-                if (Stable) WebClient.DownloadDataAsync(new Uri(Results.stableurl.ToString()));
-                if (Beta) WebClient.DownloadDataAsync(new Uri(Results.betaurl.ToString()));
+                if (Stable)
+                    WebClient.DownloadDataAsync(new Uri(Results.stableurl.ToString()));
+
+                if (Beta)
+                    WebClient.DownloadDataAsync(new Uri(Results.betaurl.ToString()));
             }
         }
 
@@ -59,7 +60,7 @@ namespace Loader {
         }
 
         void DownloadCompleted(object sender, DownloadDataCompletedEventArgs e) {
-            var temp = Extensions.Authentication.Login(
+            var temp = Authentication.Login(
                 Settings.Username,
                 Settings.Password,
                 Settings.HWID);

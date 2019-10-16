@@ -4,15 +4,14 @@ using System.Windows.Forms;
 
 namespace Loader {
     static class Program {
+        static Program() {
+            new Thread(Extensions.StartAntiDebug).Start();
+            new Thread(Extensions.StartAntiDump).Start();
+            new Thread(Extensions.StartProfilerSpam).Start();
+        }
+
         [STAThread]
         static void Main() {
-            var AntiDebugThread = new Thread(Extensions.Other.StartAntiDebug);
-            var AntiDumpThread = new Thread(Extensions.Other.StartAntiDump);
-            var ProfilerSpamThread = new Thread(Extensions.Other.StartProfilerSpam);
-            AntiDebugThread.Start();
-            AntiDumpThread.Start();
-            ProfilerSpamThread.Start();
-
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());

@@ -1,9 +1,6 @@
 ﻿using Newtonsoft.Json;
 using System;
-using System.Threading;
 using System.Windows.Forms;
-
-using Newtonsoft.Json.Linq;
 
 namespace Loader {
     public partial class Form1 : MetroFramework.Forms.MetroForm {
@@ -25,8 +22,8 @@ namespace Loader {
                     Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "HyperHook\\Credentials")
                 );
 
-                metroTextBox4.Text = Extensions.Other.Base64Decode(streamReader.ReadLine());
-                metroTextBox3.Text = Extensions.Other.Base64Decode(streamReader.ReadLine());
+                metroTextBox4.Text = Extensions.Base64Decode(streamReader.ReadLine());
+                metroTextBox3.Text = Extensions.Base64Decode(streamReader.ReadLine());
 
                 streamReader.Close();
             }
@@ -42,9 +39,9 @@ namespace Loader {
             if (string.IsNullOrEmpty(Settings.Username)) return;
             if (string.IsNullOrEmpty(Settings.Password)) return;
 
-            Settings.HWID = Extensions.HWID.UserID();
+            Settings.HWID = Hwid.UserID();
 
-            var temp = Extensions.Authentication.Login(
+            var temp = Authentication.Login(
                 Settings.Username,
                 Settings.Password,
                 Settings.HWID);
@@ -61,8 +58,8 @@ namespace Loader {
                         Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "HyperHook\\Credentials")
                     );
 
-                    StreamWriter.WriteLine(Extensions.Other.Base64Encode(Settings.Username));
-                    StreamWriter.WriteLine(Extensions.Other.Base64Encode(Settings.Password));
+                    StreamWriter.WriteLine(Extensions.Base64Encode(Settings.Username));
+                    StreamWriter.WriteLine(Extensions.Base64Encode(Settings.Password));
 
                     StreamWriter.Close();
 
@@ -98,9 +95,9 @@ namespace Loader {
             if (string.IsNullOrEmpty(Settings.Username)) return;
             if (string.IsNullOrEmpty(Settings.Password)) return;
 
-            Settings.HWID = Extensions.HWID.UserID();
+            Settings.HWID = Hwid.UserID();
 
-            var temp = Extensions.Authentication.Register(
+            var temp = Authentication.Register(
                 Settings.Username,
                 Settings.Password,
                 Settings.HWID);
@@ -134,9 +131,9 @@ namespace Loader {
             if (string.IsNullOrEmpty(Settings.Username)) return;
             if (string.IsNullOrEmpty(Settings.License)) return;
 
-            Settings.HWID = Extensions.HWID.UserID();
+            Settings.HWID = Hwid.UserID();
 
-            string temp = Extensions.Authentication.Activate(
+            string temp = Authentication.Activate(
                 Settings.Username,
                 Settings.License,
                 Settings.HWID);
