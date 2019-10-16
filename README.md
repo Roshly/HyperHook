@@ -20,11 +20,10 @@ Thaisen owns a really nice server for Loader related content so for any support 
 # Setup
 
 ### WebFiles
-- Copy WebFiles to your site
-- Change Settings.ini to fit your site
-- Setup a cron job to Files/Tick.php 
+- Upload the WebFiles folder to your website
+- Update Settings.ini to point to your website
+- Setup a [cron job](https://en.wikipedia.org/wiki/Cron) to Files/Tick.php
 
-^ Old meme please leave me alone :(
 
 ### Loader
 - Modify Settings.cs to represent your webserver config
