@@ -1,7 +1,5 @@
 # HyperHook
 
-# Info
-
 ## Wut?
 This project was originally made in 2018 and i just saw it lying around on my pc so i decided why not.
 
