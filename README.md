@@ -4,7 +4,7 @@
 This project was created in early 2018 and i found it on my Computer so i decided why not post it if i am not using it.
 
 ## Discord
-Thaisen owns a really nice server for Loader related content so for any support please join his Discord server down below
+Thaisen owns a really nice server for loader related content so for any support please join his Discord server down below
 
 <https://discord.gg/J8HNrPG> (I may possibly join some day)
 
